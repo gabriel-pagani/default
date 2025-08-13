@@ -210,3 +210,6 @@ __marimo__/
 
 # Gunicorn
 gunicorn-error-log
+
+# npm
+node_modules/
