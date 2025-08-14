@@ -17,10 +17,12 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -30,22 +32,25 @@ body {
 }
 
 .stage {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .kpi {
-  position: absolute;
-  width: 319px;
-  height: 199px;
+  width: 100%;
+  min-height: 199px;
   border-radius: 10px;
-  padding: 20px 20px 18px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
+
 .kpi .icon {
   position: absolute;
   top: 16px;
@@ -55,64 +60,107 @@ body {
   border-radius: 8px;
   opacity: 0.9;
 }
+
 .kpi h3 {
   margin: 0 0 8px 0;
   font-size: 18px;
   font-weight: 450;
   color: var(--muted);
   letter-spacing: 0.2px;
+  padding-right: 50px; /* Space for icon */
 }
+
 .kpi .value {
   font-size: 32px;
   font-weight: 600;
   color: var(--ink);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
-  margin: 0;
-  height: 165%;
+  text-align: left;
+  margin-top: auto;
 }
 
 .kpi.purple {
   background: var(--card-purple);
   outline: 1px solid var(--card-purple-stroke);
 }
+
 .kpi.red {
   background: var(--card-red);
   outline: 1px solid var(--card-red-stroke);
 }
+
 .kpi.yellow {
   background: var(--card-yellow);
   outline: 1px solid var(--card-yellow-stroke);
 }
+
 .kpi.green {
   background: var(--card-green);
   outline: 1px solid var(--card-green-stroke);
 }
+
 .kpi.blue {
   background: var(--card-blue);
   outline: 1px solid var(--card-blue-stroke);
 }
 
-.kpi.purple {
-  left: 60.5px;
-  top: 60.5px;
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .stage {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
 }
-.kpi.red {
-  left: 430.5px;
-  top: 60.5px;
+
+@media (max-width: 768px) {
+  .stage {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .kpi {
+    min-height: 160px;
+    padding: 16px;
+  }
+  
+  .kpi h3 {
+    font-size: 16px;
+  }
+  
+  .kpi .value {
+    font-size: 28px;
+  }
 }
-.kpi.yellow {
-  left: 800.5px;
-  top: 60.5px;
-}
-.kpi.green {
-  left: 1170.5px;
-  top: 60.5px;
-}
-.kpi.blue {
-  left: 1540.5px;
-  top: 60.5px;
+
+@media (max-width: 480px) {
+  .stage {
+    padding: 8px;
+    gap: 10px;
+  }
+  
+  .kpi {
+    min-height: 140px;
+    padding: 12px;
+  }
+  
+  .kpi h3 {
+    font-size: 14px;
+    padding-right: 40px;
+  }
+  
+  .kpi .value {
+    font-size: 24px;
+  }
+  
+  .kpi .icon {
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 12px;
+  }
 }
