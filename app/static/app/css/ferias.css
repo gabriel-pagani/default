@@ -1,0 +1,118 @@
+:root {
+  --bg: #f9f9fa; /* fundo */
+  --ink: #262629; /* texto principal */
+  --muted: #73737c; /* texto secundário */
+  --card-purple: #eff1fe;
+  --card-purple-stroke: #c3bff8;
+  --card-red: #fef1f1;
+  --card-red-stroke: #fbcccc;
+  --card-yellow: #fffbee;
+  --card-yellow-stroke: #fef2bf;
+  --card-green: #effaf3;
+  --card-green-stroke: #c5f0d5;
+  --card-blue: #eff9fe;
+  --card-blue-stroke: #bfe6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 500 16px/1.4 "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.kpi {
+  position: absolute;
+  width: 319px;
+  height: 199px;
+  border-radius: 10px;
+  padding: 20px 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kpi .icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+.kpi h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 450;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+}
+.kpi .value {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  height: 165%;
+}
+
+.kpi.purple {
+  background: var(--card-purple);
+  outline: 1px solid var(--card-purple-stroke);
+}
+.kpi.red {
+  background: var(--card-red);
+  outline: 1px solid var(--card-red-stroke);
+}
+.kpi.yellow {
+  background: var(--card-yellow);
+  outline: 1px solid var(--card-yellow-stroke);
+}
+.kpi.green {
+  background: var(--card-green);
+  outline: 1px solid var(--card-green-stroke);
+}
+.kpi.blue {
+  background: var(--card-blue);
+  outline: 1px solid var(--card-blue-stroke);
+}
+
+.kpi.purple {
+  left: 60.5px;
+  top: 60.5px;
+}
+.kpi.red {
+  left: 430.5px;
+  top: 60.5px;
+}
+.kpi.yellow {
+  left: 800.5px;
+  top: 60.5px;
+}
+.kpi.green {
+  left: 1170.5px;
+  top: 60.5px;
+}
+.kpi.blue {
+  left: 1540.5px;
+  top: 60.5px;
+}
