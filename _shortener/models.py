@@ -20,7 +20,7 @@ class Link(models.Model):
         if not self.slug:
             self.slug = generate_slug()
         if not self.expires_at:
-            if not self.user.has_perm('shortener.link_without_expiration'):
+            if not self.user.has_perm('_shortener.link_without_expiration'):
                 self.expires_at = timezone.now() + timedelta(days=30)
         super().save(*args, **kwargs)
 
