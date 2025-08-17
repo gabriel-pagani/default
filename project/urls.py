@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', include('app.urls', namespace='app')),
+    path('', include('_shortener.urls', namespace='shortener')),
     path('admin/', admin.site.urls),
 ]
 
