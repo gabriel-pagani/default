@@ -1,10 +1,8 @@
 from django.urls import path
-from app.views import ferias, data_ferias
-
+from app.views import home
 
 app_name = 'app'
 
 urlpatterns = [
-    path('', ferias, name='ferias'),
-    path('api/data-ferias/', data_ferias, name='data-ferias'),
+    path('', home, name='home'),
 ]
