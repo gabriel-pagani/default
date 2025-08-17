@@ -3,4 +3,4 @@ from .models import Link
 
 @admin.register(Link)
 class LinkAdmin(admin.ModelAdmin):
-    list_display = ('slug', 'original_url')
+    list_display = ( 'slug', 'original_url', 'user','expires_at')
