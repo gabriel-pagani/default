@@ -123,6 +123,14 @@ MEDIA_ROOT = BASE_DIR / 'media_root'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Redirect to login/logout
+LOGIN_URL = 'authentication:login'
+LOGIN_REDIRECT_URL = 'shortener:home'
+
+# Sessions
+SESSION_COOKIE_AGE = 60 * 60 * 24
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
 
 try:
     from project.local_settings import *
