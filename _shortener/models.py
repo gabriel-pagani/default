@@ -15,6 +15,7 @@ class Link(models.Model):
     original_url = models.URLField()
     slug = models.SlugField(unique=True, blank=True)
     expires_at = models.DateTimeField(null=True, blank=True)
+    access_count = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         if not self.slug:
