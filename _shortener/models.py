@@ -35,4 +35,5 @@ class Link(models.Model):
         permissions = [
             ("link_without_expiration", "Link without expiration"),
             ("can_change_the_slug", "Can change the slug"),
+            ("can_view_access_count", "Can view access count"),
         ]
