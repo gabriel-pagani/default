@@ -176,6 +176,10 @@ a:hover {
   background: #e8f5e8;
   color: #137333;
   border-left: 4px solid #137333;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 0 16px 0;
+  box-shadow: 0 1px 3px rgba(19, 115, 51, 0.1);
 }
 
 .messages .error,
@@ -184,6 +188,10 @@ a:hover {
   background: #fce8e6;
   color: #d93025;
   border-left: 4px solid #d93025;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 0 16px 0;
+  box-shadow: 0 1px 3px rgba(217, 48, 37, 0.1);
 }
 
 .messages .info,
@@ -191,18 +199,70 @@ a:hover {
   background: #e8f0fe;
   color: #1a73e8;
   border-left: 4px solid #1a73e8;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 0 16px 0;
+  box-shadow: 0 1px 3px rgba(26, 115, 232, 0.1);
+}
+
+.messages .warning,
+.alert-warning {
+  background: #fef7e0;
+  color: #ea8600;
+  border-left: 4px solid #ea8600;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 0 16px 0;
+  box-shadow: 0 1px 3px rgba(234, 134, 0, 0.1);
 }
 
 /* Error Lists */
 .errorlist {
   list-style: none;
-  padding: 0;
+  padding: 12px 16px;
   margin: 0 0 16px 0;
 }
 
 .errorlist li {
-  margin: 4px 0;
+  margin: 6px 0;
   font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 16px;
+}
+
+.errorlist li::before {
+  content: "•";
+  color: #d93025;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Hover effects para todas as mensagens */
+.messages .success:hover,
+.alert-success:hover {
+  box-shadow: 0 2px 6px rgba(19, 115, 51, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+.messages .error:hover,
+.errorlist:hover,
+.alert-danger:hover {
+  box-shadow: 0 2px 6px rgba(217, 48, 37, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+.messages .info:hover,
+.alert-info:hover {
+  box-shadow: 0 2px 6px rgba(26, 115, 232, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+.messages .warning:hover,
+.alert-warning:hover {
+  box-shadow: 0 2px 6px rgba(234, 134, 0, 0.15);
+  transition: box-shadow 0.2s ease;
 }
 
 /* Social Login */
