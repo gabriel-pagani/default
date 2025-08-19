@@ -5,5 +5,5 @@ app_name = 'shortener'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('<slug:slug>/', views.redirect_link),
+    path('<slug:slug>/', views.redirect_link, name='redirect-link'),
 ]
