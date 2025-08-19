@@ -161,6 +161,14 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+# Email configuration for production
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_TIMEOUT = 30
+
 try:
     from project.local_settings import *
 except ImportError:
