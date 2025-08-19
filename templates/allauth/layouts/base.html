@@ -1,0 +1,8 @@
+{% extends "allauth/layouts/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_head %}
+    <link href="{% static 'global/css/reset.css' %}" rel="stylesheet">
+    <link href="{% static 'global/css/allauth.css' %}" rel="stylesheet">
+{% endblock extra_head %}
