@@ -1,0 +1,13 @@
+{% extends 'global/index.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+{% block head %}
+        <link href="{% static 'authentication/css/style.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block body %}
+        {% include 'authentication/partials/login_form.html' %}
+        <script src="{% static 'authentication/js/script.js' %}"></script>
+{% endblock body %}

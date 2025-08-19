@@ -1,0 +1,40 @@
+<div>
+  <h2>Welcome!</h2>
+  {% if messages %} 
+    {% for message in messages %} 
+      {% if 'error' in message.tags %}
+        <div>
+          <span>{{ message }}</span>
+        </div>             
+      {% endif %}
+      {% if 'warning' in message.tags %}
+        <div>
+          <span>{{ message }}</span>
+        </div>             
+      {% endif %}
+      {% if 'info' in message.tags %}
+        <div>
+          <span>{{ message }}</span>
+        </div>             
+      {% endif %}
+      {% if 'success' in message.tags %}
+        <div>
+          <span>{{ message }}</span>
+        </div>            
+      {% endif %}
+    {% endfor%} 
+  {% endif %}
+
+  <form method="post" action="{{ form_action }}" novalidate>
+    {% csrf_token %}
+    <div>
+      <input type="text" name="username" placeholder="User" value="{{ form.username.value|default_if_none:'' }}" />
+    </div>
+    
+    <div>
+      <input type="password" name="password" placeholder="Password"/>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
