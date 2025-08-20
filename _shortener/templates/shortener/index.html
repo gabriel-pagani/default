@@ -1,16 +1,8 @@
+{% extends 'global/index.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link href="{% static 'global/images/icon.png' %}" rel="icon" />
-    <link href="{% static 'global/css/reset.css' %}" rel="stylesheet" />
-    <link href="{% static 'shortener/css/style.css' %}" rel="stylesheet" />
-  </head>
-  <body>
-    <script src="{% static 'shortener/js/script.js' %}"></script>
-  </body>
-</html>
+{% block title %}Home{% endblock title %}
+
+{% block head %}<link href="{% static 'shortener/css/style.css' %}" rel="stylesheet">{% endblock head %}
+
+{% block body %}<script src="{% static 'shortener/js/script.js' %}"></script>{% endblock body %}
