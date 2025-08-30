@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    '_shortener',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -135,7 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Redirect to login/logout
 LOGIN_URL = 'account_login'
-LOGIN_REDIRECT_URL = 'shortener:home'
+LOGIN_REDIRECT_URL = 'app:home'
 
 # Site ID (required for django-allauth)
 SITE_ID = 1
